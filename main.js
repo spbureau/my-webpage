@@ -55,6 +55,7 @@ document.getElementById("greeting-js").innerHTML='Hi world, JavaScript here';
 function showTime(){
   console.log(Date());
   document.getElementById('time').innerHTML=Date();
+  window.alert("Date Displayed!")
 };
 
 /*
@@ -64,14 +65,13 @@ let peopleLength = mypeople.length;
 
 let text = "<ul>";
 
-for (let p = 0; p < peopleLength; p++) {
+for (let p in mypeople) {
   text += "<li>" + mypeople[p] + "</li>";
 }
 
 text += "</ul>";
 
-document.getElementById("array").innerHTML=text;
-
+document.getElementById('array').innerHTML=text;
 */
 
 /*
@@ -103,16 +103,16 @@ function addNumbers(num1, num2){
 
 // time of day greeting 
 //function greetings(){
-  
-//  let dateNow = new Date(2023, 7, 28, 9, 45);
-  let dateNow = new Date(2018, 11, 24, 19, 33);
-  let hourNow = dateNow.getHours;
+  // works 
+let dateNow = new Date();
+// let dateNow = new Date(2018, 11, 24, 8, 33);
+  let hourNow = dateNow.getHours();
   
   let greeting;
   if (hourNow < 12){
     greeting = "Good morning!";
   }
-  else if(hourNow => 12 && hourNow < 17){
+  else if(hourNow < 19){
     greeting = "Good afternoon!";
   }
   else{
@@ -120,3 +120,11 @@ function addNumbers(num1, num2){
   }
   document.getElementById("greetings").innerHTML=greeting;
 //}
+
+// list
+let list = "";
+for(let i =0; i < 100; i++){
+  list += "List " + i + "</br>";
+}
+
+document.getElementById('list').innerHTML=list;
