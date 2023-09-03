@@ -112,7 +112,7 @@ let dateNow = new Date();
   if (hourNow < 12){
     greeting = "Good morning!";
   }
-  else if(hourNow < 19){
+  else if(hourNow < 16){
     greeting = "Good afternoon!";
   }
   else{
@@ -123,7 +123,7 @@ let dateNow = new Date();
 
 // list
 let list = "";
-for(let i =0; i < 100; i++){
+for(let i =0; i < 5; i++){
   list += "List " + i + "</br>";
 }
 
