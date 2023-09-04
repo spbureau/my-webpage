@@ -100,6 +100,20 @@ function addNumbers(num1, num2){
   return ans;
 };
 
+// Increase Counter
+var countValue = 0; // global var
+
+document.getElementById('counter').innerHTML = countValue; // first show
+
+function IncreaseCount(){
+  countValue += 5;
+  if (countValue <= 50){
+  document.getElementById('counter').innerHTML = countValue;
+  } else{
+    document.getElementById('counter').innerHTML = "Limit reached!";
+  }
+};
+
 
 // time of day greeting 
 //function greetings(){
